@@ -8,31 +8,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
-    <div class="fairy-background">
-        <!-- Fairies and magical elements flying around -->
-        <div class="fairy" id="fairy1"></div>
-        <div class="fairy" id="fairy2"></div>
-        <div class="fairy" id="fairy3"></div>
-    </div>
-
-    <div class="container">
+    <div class="background">
         <div class="characters">
-            <img src="https://i.ibb.co/QHtDrcw/chubby-bunny.png" alt="Chubby Bunny" class="chubby-bunny">
-            <img src="https://i.ibb.co/8sKg7F7/big-bear.png" alt="Big Bear" class="big-bear">
+            <img src="https://i.imgur.com/9A1nGsV.png" alt="Chubby Bunny" class="chubby-bunny">
+            <img src="https://i.imgur.com/cPyWmCc.png" alt="Big Bear" class="big-bear">
         </div>
-        
-        <h1 class="magical-text">I wanna be with youwo for the resht of my lifeo!</h1>
+        <h1 class="text">I wanna be with youwo for the resht of my lifeo!</h1>
     </div>
 
-    <!-- Sparkle sound effect triggered by mouse movement -->
     <script>
-        // Load the sound
+        // Load sparkle sound
         const sparkleSound = new Howl({
-            src: ['https://assets.mixkit.co/sfx/download/mixkit-arcade-game-jump-coin-216.wav'], // Use your preferred sound file
+            src: ['https://assets.mixkit.co/sfx/download/mixkit-arcade-game-jump-coin-216.wav'],
             volume: 0.2
         });
 
-        // Play sound on cursor move
+        // Play sparkle sound on mousemove
         document.addEventListener('mousemove', () => {
             sparkleSound.play();
         });
