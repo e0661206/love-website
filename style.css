@@ -1,85 +1,31 @@
-/* General body and background styling */
+/* Set the background and overall styling */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: url('https://i.ibb.co/1rpzLcs/pixie-background.jpg') no-repeat center center fixed;
+    background: url('https://i.imgur.com/FNQgt6W.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     height: 100vh;
     overflow: hidden;
-    cursor: none; /* Hide the default cursor */
     position: relative;
+    cursor: none; /* Hide default cursor */
 }
 
-/* Magical Fairy Background */
-.fairy-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Flying Fairies */
-.fairy {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: url('https://i.ibb.co/f2XYFtp/fairy.png') no-repeat center center;
-    background-size: contain;
-    opacity: 0.9;
-    animation: fly 10s linear infinite;
-}
-
-#fairy1 {
-    top: 10%;
-    left: 20%;
-}
-
-#fairy2 {
-    top: 40%;
-    left: 70%;
-    animation-duration: 8s;
-}
-
-#fairy3 {
-    top: 70%;
-    left: 50%;
-    animation-duration: 12s;
-}
-
-/* Fairy flying animation */
-@keyframes fly {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(100px, -200px) scale(1.2); }
-    100% { transform: translate(-100px, 200px) scale(1); }
-}
-
-/* Floating bunny and bear characters */
+/* Container for bunny and bear */
 .characters {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 100px;
-    position: relative;
-    z-index: 2;
 }
 
 .chubby-bunny, .big-bear {
-    width: 150px;
+    width: 200px;
     height: auto;
-    animation: float 5s ease-in-out infinite;
+    margin: 0 20px;
+    animation: float 4s ease-in-out infinite;
 }
 
-.chubby-bunny {
-    margin-right: 20px;
-}
-
-.big-bear {
-    margin-left: 20px;
-}
-
-/* Float animation for characters */
+/* Float animation */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -89,20 +35,21 @@ body {
     }
 }
 
-/* Magical 3D Text */
-.magical-text {
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
-                 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.3);
+/* Text styling */
+.text {
+    font-size: 3em;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
     animation: bounce 3s ease-in-out infinite;
 }
 
-/* Bounce text animation */
+/* Bouncing animation for the text */
 @keyframes bounce {
     0%, 100% {
         transform: translate(-50%, 0);
@@ -112,27 +59,25 @@ body {
     }
 }
 
-/* Cursor as a bunny */
+/* Cursor: Custom Bunny with Sparkle Trail */
 body::after {
     content: '';
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url('https://i.ibb.co/QHtDrcw/chubby-bunny.png') no-repeat center center;
+    background: url('https://i.imgur.com/9A1nGsV.png') no-repeat center center;
     background-size: contain;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
-}
-
-body {
-    cursor: none;
+    animation: sparkle 0.3s ease-out infinite;
 }
 
 body:hover::after {
     transform: translate(-50%, -50%);
 }
 
+/* Sparkle trail */
 @keyframes sparkle {
     0%, 100% {
         opacity: 0;
@@ -140,4 +85,3 @@ body:hover::after {
     50% {
         opacity: 1;
     }
-}
